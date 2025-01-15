@@ -1,394 +1,508 @@
-# 欢迎使用 `Douyin_TikTok_Download_API` (抖音/TikTok无水印解析API)
+<div align="center">
+<a href="https://douyin.wtf/" alt="logo" ><img src="https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/main/logo/logo192.png" width="120"/></a>
+</div>
+<h1 align="center">Douyin_TikTok_Download_API(抖音/TikTok API)</h1>
 
-![](https://views.whatilearened.today/views/github/Evil0ctal/TikTokDownloader_PyWebIO.svg)
-[![GitHub license](https://img.shields.io/github/license/Evil0ctal/TikTokDownloader_PyWebIO)](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/Evil0ctal/TikTokDownloader_PyWebIO)](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/issues)
-[![GitHub forks](https://img.shields.io/github/forks/Evil0ctal/TikTokDownloader_PyWebIO)](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/network)
-[![GitHub stars](https://img.shields.io/github/stars/Evil0ctal/TikTokDownloader_PyWebIO)](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/stargazers)
+<div align="center">
 
-Language:  [[English](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/README.en.md)]  [[简体中文](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/README.md)]
+[English](./README.en.md) | [简体中文](./README.md)
 
-> Note: This API is applicable to Douyin and TikTok. Douyin is TikTok in China. You can distribute or modify the code at will, but please mark the original author.
+🚀「Douyin_TikTok_Download_API」是一个开箱即用的高性能异步[抖音](https://www.douyin.com)|[TikTok](https://www.tiktok.com)|[Bilibili](https://www.bilibili.com)数据爬取工具，支持API调用，在线批量解析及下载。
 
-> 注: 此API适用于Douyin和TikTok，Douyin为中国区域的TikTok，你可以随意分发或修改代码，但请标注原作者。
+[![GitHub license](https://img.shields.io/github/license/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](LICENSE)
+[![Release Version](https://img.shields.io/github/v/release/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/releases/latest)
+[![GitHub Star](https://img.shields.io/github/stars/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/stargazers)
+[![GitHub Fork](https://img.shields.io/github/forks/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/issues?q=is%3Aissue+is%3Aclosed)
+![GitHub Repo size](https://img.shields.io/github/repo-size/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square&color=3cb371)
+<br>
+[![PyPI v](https://img.shields.io/pypi/v/douyin-tiktok-scraper?style=flat-square&color=%23a8e6cf)](https://pypi.org/project/douyin-tiktok-scraper/)
+[![PyPI wheel](https://img.shields.io/pypi/wheel/douyin-tiktok-scraper?style=flat-square&color=%23dcedc1)](https://pypi.org/project/douyin-tiktok-scraper/#files)
+[![PyPI dm](https://img.shields.io/pypi/dm/douyin-tiktok-scraper?style=flat-square&color=%23ffd3b6)](https://pypi.org/project/douyin-tiktok-scraper/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/douyin-tiktok-scraper?color=%23ffaaa5&style=flat-square)](https://pypi.org/project/douyin-tiktok-scraper/)
+<br>
+[![API status](https://img.shields.io/website?down_color=lightgrey&label=API%20Status&down_message=API%20offline&style=flat-square&up_color=%23dfb9ff&up_message=online&url=https%3A%2F%2Fapi.douyin.wtf%2Fdocs)](https://api.douyin.wtf/docs)
+[![TikHub-API status](https://img.shields.io/website?down_color=lightgrey&label=TikHub-API%20Status&down_message=API%20offline&style=flat-square&up_color=%23dfb9ff&up_message=online&url=https%3A%2F%2Fapi.tikhub.io%2Fdocs)](https://api.tikhub.io/docs)
+<br>
+[![爱发电](https://img.shields.io/badge/爱发电-evil0ctal-blue.svg?style=flat-square&color=ea4aaa&logo=github-sponsors)](https://afdian.net/@evil0ctal)
+[![Kofi](https://img.shields.io/badge/Kofi-evil0ctal-orange.svg?style=flat-square&logo=kofi)](https://ko-fi.com/evil0ctal)
+[![Patreon](https://img.shields.io/badge/Patreon-evil0ctal-red.svg?style=flat-square&logo=patreon)](https://www.patreon.com/evil0ctal)
+
+</div>
+
+## 赞助商
+
+这些赞助商已付费放置在这里，**Douyin_TikTok_Download_API** 项目将永远免费且开源。如果您希望成为该项目的赞助商，请查看我的 [GitHub 赞助商页面](https://github.com/sponsors/evil0ctal)。
+
+<div align="center">
+    <a href="https://www.tikhub.io/" target="_blank">
+        <img src="https://tikhub.io/wp-content/uploads/2024/11/Main-Logo.webp" width="100" alt="TikHub.io - Global Social Data & API Marketplace">
+    </a>
+    <div>
+        <h2><b>TikHub.io</b></h2>
+        <p>Your Ultimate Social Media Data & API Marketplace</p>
+        <p>
+            Professional data solutions for Douyin, Xiaohongshu, TikTok, Instagram, YouTube, 
+            Twitter, and more.<br>
+            Real-time Data | Flexible APIs | Seamless Integration | Competitive Pricing with Discounts
+        </p>
+        <p>
+            <b>Discover TikHub.io Marketplace</b><br>
+            Buy and sell custom APIs, services, and social media solutions.<br>
+            Join a thriving ecosystem of developers, businesses, and content creators.
+        </p>
+        <p><em>Trusted by leading global influencer marketing and social media intelligence platforms</em></p>
+    </div>
+</div>
+
 
 ## 👻介绍
 
-> 因恶意使用暂时关闭/video和/music这两个API，如需要请自行部署，其他功能在演示站上仍正常使用，在我没想到更好的解决方法之前请手动保存视频文件。我的小鸡只有0.5G内存一个CPU核心，顶不住了╥﹏╥...
+> 🚨如需使用私有服务器运行本项目，请参考：[部署准备工作](./README.md#%EF%B8%8F%E9%83%A8%E7%BD%B2%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%E8%AF%B7%E4%BB%94%E7%BB%86%E9%98%85%E8%AF%BB), [Docker部署](./README.md#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E4%BA%8C-docker), [一键部署](./README.md#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E4%B8%80-linux)
 
-🚀演示地址：[https://douyin.wtf/](https://douyin.wtf/)
+本项目是基于 [PyWebIO](https://github.com/pywebio/PyWebIO)，[FastAPI](https://fastapi.tiangolo.com/)，[HTTPX](https://www.python-httpx.org/)，快速异步的[抖音](https://www.douyin.com/)/[TikTok](https://www.tiktok.com/)数据爬取工具，并通过Web端实现在线批量解析以及下载无水印视频或图集，数据爬取API，iOS快捷指令无水印下载等功能。你可以自己部署或改造本项目实现更多功能，也可以在你的项目中直接调用[scraper.py](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/Stable/scraper.py)或安装现有的[pip包](https://pypi.org/project/douyin-tiktok-scraper/)作为解析库轻松爬取数据等.....
 
-🛰API演示：[https://api.douyin.wtf/](https://api.douyin.wtf/)
+*一些简单的运用场景：*
 
-💾iOS快捷指令: [点击获取指令](https://www.icloud.com/shortcuts/126820d2783748d1bdec95a223a02639) (更新于2022/04/16，快捷指令可自动更新，安装一次即可。)
+*下载禁止下载的视频，进行数据分析，iOS无水印下载（搭配[iOS自带的快捷指令APP](https://apps.apple.com/cn/app/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/id915249334)
+配合本项目API实现应用内下载或读取剪贴板下载）等.....*
 
-本项目使用 [PyWebIO](https://github.com/pywebio/PyWebIO)、[Flask](https://github.com/pallets/flask)，利用Python实现在线批量解析抖音的无水印视频/图集。
+## 🔊 V4 版本备注
 
-可用于下载作者禁止下载的视频，同时可搭配[iOS快捷指令APP](https://apps.apple.com/cn/app/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/id915249334)配合本项目API实现应用内下载。
+- 感兴趣一起写这个项目的给请加微信`Evil0ctal`备注github项目重构，大家可以在群里互相交流学习，不允许发广告以及违法的东西，纯粹交朋友和技术交流。
+- 本项目使用`X-Bogus`算法以及`A_Bogus`算法请求抖音和TikTok的Web API。
+- 由于Douyin的风控，部署完本项目后请在**浏览器中获取Douyin网站的Cookie然后在config.yaml中进行替换。**
+- 请在提出issue之前先阅读下方的文档，大多数问题的解决方法都会包含在文档中。
+- 本项目是完全免费的，但使用时请遵守：[Apache-2.0 license](https://github.com/Evil0ctal/Douyin_TikTok_Download_API?tab=Apache-2.0-1-ov-file#readme)
 
-快捷指令需要在抖音或TikTok的APP内，选择你想要保存的视频，点击分享按钮，然后找到 "抖音TikTok无水印下载" 这个选项，如遇到通知询问是否允许快捷指令访问xxxx (域名或服务器)，需要点击允许才可以正常使用。
+## 🔖TikHub.io API
 
+[TikHub.io](https://api.tikhub.io/)是一个API平台，提供包括Douyin、TikTok在内的各种公开数据接口，如果您想支持 [Douyin_TikTok_Download_API](https://github.com/Evil0ctal/Douyin_TikTok_Download_API) 项目的开发，我们强烈建议您选择[TikHub.io](https://api.tikhub.io/)。
+
+#### 特点：
+
+> 📦 开箱即用
+
+简化使用流程，利用封装好的SDK迅速开展开发工作。所有API接口均依据RESTful架构设计，并使用OpenAPI规范进行描述和文档化，附带示例参数，确保调用更加简便。
+
+> 💰 成本优势
+
+不预设套餐限制，没有月度使用门槛，所有消费按实际使用量即时计费，并且根据用户每日的请求量进行阶梯式计费，同时可以通过每日签到在用户后台进行签到获取免费的额度，并且这些免费额度不会过期。
+
+> ⚡️ 快速支持
+
+我们有一个庞大的Discord社区服务器，管理员和其他用户会在服务器中快速的回复你，帮助你快速解决当前的问题。
+
+> 🎉 拥抱开源
+
+TikHub的部分源代码会开源在Github上，并且会赞助一些开源项目的作者。
+
+#### 链接：
+
+- Github: [TikHub Github](https://github.com/TikHubIO)
+- Discord: [TikHub Discord](https://discord.com/invite/aMEAS8Xsvz)
+- Register: [TikHub signup](https://beta-web.tikhub.io/en-us/users/signup)
+- API Docs: [TikHub API Docs](https://api.tikhub.io/)
+
+## 🖥演示站点: 我很脆弱...请勿压测(·•᷄ࡇ•᷅ ）
+
+> 😾演示站点的在线下载功能已关闭，并且由于Cookie原因，Douyin的解析以及API服务在Demo站点无法保证可用性。
+
+🍔Web APP: [https://douyin.wtf/](https://douyin.wtf/)
+
+🍟API Document: [https://douyin.wtf/docs](https://douyin.wtf/docs)
+
+🌭TikHub API Document: [https://api.tikhub.io/docs](https://api.tikhub.io/docs)
+
+💾iOS Shortcut(快捷指令): [Shortcut release](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/discussions/104?sort=top)
+
+📦️桌面端下载器(仓库推荐)：
+
+- [Johnserf-Seed/TikTokDownload](https://github.com/Johnserf-Seed/TikTokDownload)
+- [HFrost0/bilix](https://github.com/HFrost0/bilix)
+- [Tairraos/TikDown - [需更新]](https://github.com/Tairraos/TikDown/)
+
+## ⚗️技术栈
+
+* [/app/web](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/app/web) - [PyWebIO](https://www.pyweb.io/)
+* [/app/api](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/app/api) - [FastAPI](https://fastapi.tiangolo.com/)
+* [/crawlers](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/crawlers) - [HTTPX](https://www.python-httpx.org/)
+
+> ***/crawlers***
+
+- 向不同平台的API提交请求并取回数据，处理后返回字典(dict)，支持异步。
+
+> ***/app/api***
+
+- 获得请求参数并使用`Crawlers`相关类处理数据后以JSON形式返回，视频下载，配合iOS快捷指令实现快速调用，支持异步。
+
+> ***/app/web***
+
+- 使用`PyWebIO`制作的简易Web程序，将网页输入的值进行处理后使用`Crawlers`相关类处理接口输出相关数据在网页上。
+
+***以上文件的参数大多可在对应的`config.yaml`中进行修改***
 
 ## 💡项目文件结构
 
 ```
-.
-└── Douyin_TikTok_Download_API/
-    ├── Web/
-    │   ├── web_zh.py(网页入口)
-    │   ├── scraper.py(解析库)
-    │   └── logs.txt(错误日志)
-    ├── API/
-    │   ├── web_api.py(API)
-    │   ├── scraper.py(解析库)
-    │   └── API_logs.txt(API调用日志)
-    ├── TikTok_ZH.py(中文web界面旧代码不再维护,目前仍工作)
-    ├── TikTok_EN.py(英文web界面旧代码不再维护,未测试)
-    └── requirements.txt(旧代码不再维护)
+./Douyin_TikTok_Download_API
+├─app
+│  ├─api
+│  │  ├─endpoints
+│  │  └─models
+│  ├─download
+│  └─web
+│      └─views
+└─crawlers
+  ├─bilibili
+  │  └─web  
+  ├─douyin
+  │  └─web
+  ├─hybrid
+  ├─tiktok
+  │  ├─app
+  │  └─web
+  └─utils
 ```
 
-## 💯已支持功能：
+## ✨支持功能：
 
-- 支持抖音视频/图集解析
-- 支持海外TikTok视频解析(无图集解析)
-- 支持批量解析(支持抖音/TikTok混合解析)
-- 支持结果页批量下载无水印视频
-- 支持API调用
-- 支持[iOS快捷指令](https://apps.apple.com/cn/app/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/id915249334)实现应用内下载无水印视频/图集
-
+- 网页端批量解析(支持抖音/TikTok混合解析)
+- 在线下载视频或图集。
+- 制作[pip包](https://pypi.org/project/douyin-tiktok-scraper/)方便快速导入你的项目
+- [iOS快捷指令快速调用API](https://apps.apple.com/cn/app/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/id915249334)实现应用内下载无水印视频/图集
+- 完善的API文档([Demo/演示](https://api.douyin.wtf/docs))
+- 丰富的API接口：
+  - 抖音网页版API
+    
+    - [x] 视频数据解析
+    - [x] 获取用户主页作品数据
+    - [x] 获取用户主页喜欢作品数据
+    - [x] 获取用户主页收藏作品数据
+    - [x] 获取用户主页信息
+    - [x] 获取用户合辑作品数据
+    - [x] 获取用户直播流数据
+    - [x] 获取指定用户的直播流数据
+    - [x] 获取直播间送礼用户排行榜
+    - [x] 获取单个视频评论数据
+    - [x] 获取指定视频的评论回复数据
+    - [x] 生成msToken
+    - [x] 生成verify_fp
+    - [x] 生成s_v_web_id
+    - [x] 使用接口网址生成X-Bogus参数
+    - [x] 使用接口网址生成A_Bogus参数
+    - [x] 提取单个用户id
+    - [x] 提取列表用户id
+    - [x] 提取单个作品id
+    - [x] 提取列表作品id
+    - [x] 提取列表直播间号
+    - [x] 提取列表直播间号
+  - TikTok网页版API
+    
+    - [x] 视频数据解析
+    - [x] 获取用户主页作品数据
+    - [x] 获取用户主页喜欢作品数据
+    - [x] 获取用户主页信息
+    - [x] 获取用户主页粉丝数据
+    - [x] 获取用户主页关注数据
+    - [x] 获取用户主页合辑作品数据
+    - [x] 获取用户主页搜藏数据
+    - [x] 获取用户主页播放列表数据
+    - [x] 获取单个视频评论数据
+    - [x] 获取指定视频的评论回复数据
+    - [x] 生成msToken
+    - [x] 生成ttwid
+    - [x] 使用接口网址生成X-Bogus参数
+    - [x] 提取单个用户sec_user_id
+    - [x] 提取列表用户sec_user_id
+    - [x] 提取单个作品id
+    - [x] 提取列表作品id
+    - [x] 获取用户unique_id
+    - [x] 获取列表unique_id
+  - 哔哩哔哩网页版API
+    - [x] 获取单个视频详情信息
+    - [x] 获取视频流地址
+    - [x] 获取用户发布视频作品数据
+    - [x] 获取用户所有收藏夹信息
+    - [x] 获取指定收藏夹内视频数据
+    - [x] 获取指定用户的信息
+    - [x] 获取综合热门视频信息
+    - [x] 获取指定视频的评论
+    - [x] 获取视频下指定评论的回复
+    - [x] 获取指定用户动态
+    - [x] 获取视频实时弹幕
+    - [x] 获取指定直播间信息
+    - [x] 获取直播间视频流
+    - [x] 获取指定分区正在直播的主播
+    - [x] 获取所有直播分区列表
+    - [x] 通过bv号获得视频分p信息
 ---
 
-## 🤦‍♂️后续功能：
+## 📦调用解析库（已废弃需要更新）:
 
-- [ ] 支持输入(抖音/TikTok)作者主页链接实现批量解析
+> 💡PyPi：[https://pypi.org/project/douyin-tiktok-scraper/](https://pypi.org/project/douyin-tiktok-scraper/)
 
----
-
-## 🧭如何使用:
-
-- 克隆本仓库：
-
-```console
-git clone https://github.com/Evil0ctal/Douyin_TikTok_Download_API.git
-```
-
-- 移动至仓库目录：
-
-```console
-cd Douyin_TikTok_Download_API
-```
-
-- 网页解析
-
-```console
-# 移动至Web目录
-cd Web
-# 安装依赖库
-pip install -r requirements.txt
-# 运行web_zh.py (测试过的Python版本为3.8)
-python3 web_zh.py
-```
-
-- API
-
-```console
-# 移动至API目录
-cd API
-# 安装依赖库
-pip install -r requirements.txt
-# 运行web_api.py (测试过的Python版本为3.8)
-python3 web_api.py
-```
-
-- 调用解析库
+安装解析库：`pip install douyin-tiktok-scraper`
 
 ```python
-# 将scraper.py拷贝至你的项目目录(测试过的Python版本为3.8)
-# 在该项目中导入scraper.py 
-from scraper import Scraper
+import asyncio
+from douyin_tiktok_scraper.scraper import Scraper
+
 api = Scraper()
-# 解析Douyin视频/图集
-douyin_data = api.douyin('抖音分享口令/链接')
-# 返回字典
-print(douyin_data)
-# 解析TikTok视频/图集
-tiktok_data = api.tiktok('TikTok分享口令/链接')
-# 返回字典
-print(tiktok_data)
-```
 
-- 入口
+async def hybrid_parsing(url: str) -> dict:
+    # Hybrid parsing(Douyin/TikTok URL)
+    result = await api.hybrid_parsing(url)
+    print(f"The hybrid parsing result:\n {result}")
+    return result
 
-```text
-网页入口:
-http://localhost(服务器IP):5000/
-API入口:
-http://localhost(服务器IP):2333/
+asyncio.run(hybrid_parsing(url=input("Paste Douyin/TikTok/Bilibili share URL here: ")))
 ```
 
 ## 🗺️支持的提交格式：
 
+> 💡提示：包含但不仅限于以下例子，如果遇到链接解析失败请开启一个新 [issue](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/issues)
+
 - 抖音分享口令  (APP内复制)
 
 ```text
-例子：7.43 pda:/ 让你在几秒钟之内记住我  https://v.douyin.com/L5pbfdP/ 复制此链接，打开Dou音搜索，直接观看视频！
+7.43 pda:/ 让你在几秒钟之内记住我  https://v.douyin.com/L5pbfdP/ 复制此链接，打开Dou音搜索，直接观看视频！
 ```
 
 - 抖音短网址 (APP内复制)
 
 ```text
-例子：https://v.douyin.com/L4FJNR3/
+https://v.douyin.com/L4FJNR3/
 ```
 
 - 抖音正常网址 (网页版复制)
 
 ```text
-例子：
 https://www.douyin.com/video/6914948781100338440
+```
+
+- 抖音发现页网址 (APP复制)
+
+```text
+https://www.douyin.com/discover?modal_id=7069543727328398622
 ```
 
 - TikTok短网址 (APP内复制)
 
 ```text
-例子：
-https://vm.tiktok.com/TTPdkQvKjP/
+https://www.tiktok.com/t/ZTR9nDNWq/
 ```
 
 - TikTok正常网址 (网页版复制)
 
 ```text
-例子：
-https://www.tiktok.com/@tvamii/video/7045537727743380782
+https://www.tiktok.com/@evil0ctal/video/7156033831819037994
 ```
 
 - 抖音/TikTok批量网址(无需使用符合隔开)
 
 ```text
-例子：
-2.84 nqe:/ 骑白马的也可以是公主%%百万转场变身  https://v.douyin.com/L4FJNR3/ 复制此链接，打开Dou音搜索，直接观看视频！
-8.94 mDu:/ 让你在几秒钟之内记住我  https://v.douyin.com/L4NpDJ6/ 复制此链接，打开Dou音搜索，直接观看视频！
-9.94 LWz:/ ok我坦白交代 %%knowknow  https://v.douyin.com/L4NEvNn/ 复制此链接，打开Dou音搜索，直接观看视频！
-https://www.tiktok.com/@gamer/video/7054061777033628934
-https://www.tiktok.com/@off.anime_rei/video/7059609659690339586
-https://www.tiktok.com/@tvamii/video/7045537727743380782
+https://v.douyin.com/L4NpDJ6/
+https://www.douyin.com/video/7126745726494821640
+2.84 nqe:/ 骑白马的也可以是公主%%百万转场变身https://v.douyin.com/L4FJNR3/ 复制此链接，打开Dou音搜索，直接观看视频！
+https://www.tiktok.com/t/ZTR9nkkmL/
+https://www.tiktok.com/t/ZTR9nDNWq/
+https://www.tiktok.com/@evil0ctal/video/7156033831819037994
 ```
 
-## 🛰️API使用
+## 🛰️API文档
 
-API可将请求参数转换为需要提取的无水印视频/图片直链，配合IOS捷径可实现应用内下载。
+***API文档：***
 
-- 解析请求参数
+本地：[http://localhost/docs](http://localhost/docs)
 
-```text
-http://localhost(服务器IP):2333/api?url="复制的(抖音/TikTok)口令/链接"
+在线：[https://api.douyin.wtf/docs](https://api.douyin.wtf/docs)
+
+***API演示：***
+
+- 爬取视频数据(TikTok或Douyin混合解析)
+  `https://api.douyin.wtf/api/hybrid/video_data?url=[视频链接/Video URL]&minimal=false`
+- 下载视频/图集(TikTok或Douyin混合解析)
+  `https://api.douyin.wtf/api/download?url=[视频链接/Video URL]&prefix=true&with_watermark=false`
+
+***更多演示请查看文档内容......***
+
+## ⚠️部署前的准备工作(请仔细阅读)：
+
+- 你需要自行解决爬虫Cookie风控问题，否则可能会导致接口无法使用，修改完配置文件后需要重启服务才能生效，并且最好使用已经登录过的账号的Cookie。
+  - 抖音网页端Cookie（自行获取并替换下面配置文件中的Cookie）：
+  - https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/30e56e5a7f97f87d60b1045befb1f6db147f8590/crawlers/douyin/web/config.yaml#L7
+  - TikTok网页端Cookie（自行获取并替换下面配置文件中的Cookie）：
+  - https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/30e56e5a7f97f87d60b1045befb1f6db147f8590/crawlers/tiktok/web/config.yaml#L6
+- 演示站点的在线下载功能被我关掉了，有人下的视频巨大无比直接给我服务器干崩了，你可以在网页解析结果页面右键保存视频...
+- 演示站点的Cookie是我自己的，不保证长期有效，只起到演示作用，自己部署的话请自行获取Cookie。
+- 需要TikTok Web API返回的视频链接直接访问会发生HTTP 403错误，请使用本项目API中的`/api/download`接口对TikTok 视频进行下载，这个接口在演示站点中已经被手动关闭了，需要你自行部署本项目。
+- 这里有一个**视频教程**可以参考：***[https://www.bilibili.com/video/BV1vE421j7NR/](https://www.bilibili.com/video/BV1vE421j7NR/)***
+
+## 💻部署(方式一 Linux)
+
+> 💡提示：最好将本项目部署至美国地区的服务器，否则可能会出现奇怪的BUG。
+
+推荐大家使用[Digitalocean](https://www.digitalocean.com/)的服务器，因为可以白嫖。
+
+使用我的邀请链接注册，你可以获得$200的credit，当你在上面消费$25时，我也可以获得$25的奖励。
+
+我的邀请链接：
+
+[https://m.do.co/c/9f72a27dec35](https://m.do.co/c/9f72a27dec35)
+
+> 使用脚本一键部署本项目
+
+- 本项目提供了一键部署脚本，可以在服务器上快速部署本项目。
+- 脚本是在Ubuntu 20.04 LTS上测试的，其他系统可能会有问题，如果有问题请自行解决。
+- 使用wget命令下载[install.sh](https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/main/bash/install.sh)至服务器并运行
+
+```
+wget -O install.sh https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/main/bash/install.sh && sudo bash install.sh
 ```
 
-- 返回参数
+> 开启/停止服务
 
-> 抖音视频
+- 使用以下命令来控制服务的运行或停止：
+  - `sudo systemctl start Douyin_TikTok_Download_API.service`
+  - `sudo systemctl stop Douyin_TikTok_Download_API.service`
 
-```json
-{
-   "analyze_time":"1.9043s",
-   "api_url":"https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids=6918273131559881997",
-   "nwm_video_url":"http://v3-dy-o.zjcdn.com/23f0dec312ede563bef881af9a88bdc7/624dd965/video/tos/cn/tos-cn-ve-15/eccedcf4386948f5b5a1f0bcfb3dcde9/?a=1128&br=2537&bt=2537&cd=0%7C0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=sYGC~3E7nz7Th1PZSDXq&l=202204070118030102080650132A21E31F&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3hleDRsODlkMzMzaGkzM0ApODpmNWc4ODs5N2lmNzg5aWcpaGRqbGRoaGRmLi4ybnBrbjYuYC0tYy0wc3MtYmJjNTM2NjAtNDFjMzJgOmNwb2wrbStqdDo%3D&vl=&vr=",
-   "original_url":"https://v.douyin.com/L4FJNR3/",
-   "platform":"douyin",
-   "status":"success",
-   "url_type":"video",
-   "video_author":"Real机智张",
-   "video_author_id":"Rea1yaoyue",
-   "video_author_signature":"",
-   "video_author_uid":"59840491348",
-   "video_aweme_id":"6918273131559881997",
-   "video_comment_count":"89145",
-   "video_create_time":"1610786002",
-   "video_digg_count":"2968195",
-   "video_hashtags":[
-      "百万转场变身"
-   ],
-   "video_music":"https://sf3-cdn-tos.douyinstatic.com/obj/ies-music/6910889805266504461.mp3",
-   "video_music_author":"梅尼耶",
-   "video_music_id":"6910889820861451000",
-   "video_music_mid":"6910889820861451021",
-   "video_music_title":"@梅尼耶创作的原声",
-   "video_play_count":"0",
-   "video_share_count":"74857",
-   "video_title":"骑白马的也可以是公主#百万转场变身",
-   "wm_video_url":"https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300ffe0000c01a96q5nis1qu5b1u10&ratio=720p&line=0"
-}
+> 开启/关闭开机自动运行
+
+- 使用以下命令来设置服务开机自动运行或取消开机自动运行：
+  - `sudo systemctl enable Douyin_TikTok_Download_API.service`
+  - `sudo systemctl disable Douyin_TikTok_Download_API.service`
+
+> 更新项目
+
+- 项目更新时，确保更新脚本在虚拟环境中执行，更新所有依赖。进入项目bash目录并运行update.sh：
+- `cd /www/wwwroot/Douyin_TikTok_Download_API/bash && sudo bash update.sh`
+
+## 💽部署(方式二 Docker)
+
+> 💡提示：Docker部署是最简单的部署方式，适合不熟悉Linux的用户，这种方法适合保证环境一致性、隔离性和快速设置。
+> 请使用能正常访问Douyin或TikTok的服务器，否则可能会出现奇怪的BUG。
+
+### 准备工作
+
+开始之前，请确保您的系统已安装Docker。如果还未安装Docker，可以从[Docker官方网站](https://www.docker.com/products/docker-desktop/)下载并安装。
+
+### 步骤1：拉取Docker镜像
+
+首先，从Docker Hub拉取最新的Douyin_TikTok_Download_API镜像。
+
+```bash
+docker pull evil0ctal/douyin_tiktok_download_api:latest
 ```
 
-> 抖音图集
+如果需要，可以替换`latest`为你需要部署的具体版本标签。
 
-```json
-{
-   "album_author":"治愈图集",
-   "album_author_id":"ZYTJ2002",
-   "album_author_signature":"取无水印图",
-   "album_author_uid":"449018054867063",
-   "album_aweme_id":"7015137063141920030",
-   "album_comment_count":"5436",
-   "album_create_time":"1633338878",
-   "album_digg_count":"193734",
-   "album_hashtags":[
-      "晚霞",
-      "治愈系",
-      "落日余晖",
-      "日落🌄"
-   ],
-   "album_list":[
-      "https://p26-sign.douyinpic.com/tos-cn-i-0813/5223757a7bef4f8480cd25d0fa2d2d94~noop.webp?x-expires=1651856400&x-signature=K1VjJdWTHCAaYSz14y6NumjjtfI%3D&from=4257465056&s=PackSourceEnum_DOUYIN_REFLOW&se=false&biz_tag=aweme_images&l=202204070120460102101050412A210A47",
-      "https://p26-sign.douyinpic.com/tos-cn-i-0813/d99467672da840908acccf2d2b4b7ef7~noop.webp?x-expires=1651856400&x-signature=ncBb8Tt7z4PmpUyiCNr%2FJYnwRSA%3D&from=4257465056&s=PackSourceEnum_DOUYIN_REFLOW&se=false&biz_tag=aweme_images&l=202204070120460102101050412A210A47",
-      "https://p26-sign.douyinpic.com/tos-cn-i-0813/5c2562210b1a4d4c99d6d4dbd2f23f2b~noop.webp?x-expires=1651856400&x-signature=Rsmplb53IKfvKd3mmIb4iQNhlIE%3D&from=4257465056&s=PackSourceEnum_DOUYIN_REFLOW&se=false&biz_tag=aweme_images&l=202204070120460102101050412A210A47",
-      "https://p26-sign.douyinpic.com/tos-cn-i-0813/9bb74c0c6aff4217bd1491a077b2c817~noop.webp?x-expires=1651856400&x-signature=BLRyHoKP0ybIci57yneOca62dxI%3D&from=4257465056&s=PackSourceEnum_DOUYIN_REFLOW&se=false&biz_tag=aweme_images&l=202204070120460102101050412A210A47"
-   ],
-   "album_music":"https://sf6-cdn-tos.douyinstatic.com/obj/ies-music/6978805801733442341.mp3",
-   "album_music_author":"魏同学",
-   "album_music_id":"6978805810365271000",
-   "album_music_mid":"6978805810365270791",
-   "album_music_title":"@魏同学创作的原声",
-   "album_play_count":"0",
-   "album_share_count":"30717",
-   "album_title":"“山海自有归期 风雨自有相逢 意难平终将和解 万事终将如意”#晚霞 #治愈系 #落日余晖 #日落🌄",
-   "analyze_time":"1.0726s",
-   "api_url":"https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids=7015137063141920030",
-   "original_url":"https://v.douyin.com/Nb8jysN/",
-   "platform":"douyin",
-   "status":"success",
-   "url_type":"album"
-}
+### 步骤2：运行Docker容器
+
+拉取镜像后，您可以从此镜像启动一个容器。以下是运行容器的命令，包括基本配置：
+
+```bash
+docker run -d --name douyin_tiktok_api -p 80:80 evil0ctal/douyin_tiktok_download_api
 ```
 
-> TikTok视频
+这个命令的每个部分作用如下：
 
-```JSON
-{
-   "analyze_time":"5.0863s",
-   "nwm_video_url":"https://v19.tiktokcdn-us.com/cfa357dadd8f913f013a6d0b0dca293f/624e20fa/video/tos/useast5/tos-useast5-ve-0068c003-tx/3296231486014755a1b81aa70c349a53/?a=1233&br=6498&bt=3249&cd=0%7C0%7C0%7C3&ch=0&cr=3&cs=0&cv=1&dr=0&ds=6&er=&ft=bY1KJnB4TJBS6BMy-L1iVKP&l=20220406172333010113135214232FAB56&lr=all&mime_type=video_mp4&net=0&pl=0&qs=0&rc=MzpsaGY6Zjo7PDMzZzczNEApNjY6ZTtkOzxpN2Q3PDo5OmdgZ2BtcjQwai9gLS1kMS9zczJhLTEzYjEuMTJeXzQyLmM6Yw%3D%3D&vl=&vr=",
-   "original_url":"https://www.tiktok.com/@oregonzoo/video/7080938094823738666",
-   "platform":"tiktok",
-   "status":"success",
-   "url_type":"video",
-   "video_author":"oregonzoo",
-   "video_author_SecId":"MS4wLjABAAAArWNQ8-AZN6CxWOkqdeWsMBUuLDmJt8TWUAk0S4aWDW5V5EoqRbuczhaLnxJHCGob",
-   "video_author_diggCount":94,
-   "video_author_followerCount":1800000,
-   "video_author_followingCount":39,
-   "video_author_heartCount":29700000,
-   "video_author_id":"6699816060206171141",
-   "video_author_nickname":"Oregon Zoo",
-   "video_author_videoCount":264,
-   "video_aweme_id":"7080938094823738666",
-   "video_comment_count":61,
-   "video_create_time":"1648659375",
-   "video_digg_count":11800,
-   "video_hashtags":[
-      "redpanda",
-      "boop",
-      "sunshine"
-   ],
-   "video_music":"https://sf16.tiktokcdn-us.com/obj/ies-music-tx/7075363935741856558.mp3",
-   "video_music_author":"Gilderoy Dauterive",
-   "video_music_id":"7075363884613356330",
-   "video_music_title":"Be the Sunshine",
-   "video_music_url":"https://sf16.tiktokcdn-us.com/obj/ies-music-tx/7075363935741856558.mp3",
-   "video_play_count":60100,
-   "video_ratio":"720p",
-   "video_share_count":298,
-   "video_title":"Moshu ✨ #redpanda #boop #sunshine",
-   "wm_video_url":"https://v16m-webapp.tiktokcdn-us.com/0394b9183a5852d4392a7e804bf78c55/624e20f6/video/tos/useast5/tos-useast5-ve-0068c001-tx/fc63ae232e70466398b55ccf97eb3c67/?a=1988&br=6468&bt=3234&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XY53A3E7nz7Th-pZSDXq&l=202204061723290101131351171341B9BB&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=MzpsaGY6Zjo7PDMzZzczNEApOjo4aDMzZmRlN2loOWk6ZWdgZ2BtcjQwai9gLS1kMS9zczBhNGA0LTIwNjNiYDQ2YmE6Yw%3D%3D&vl=&vr="
-}
+* `-d`：在后台运行容器（分离模式）。
+* `--name douyin_tiktok_api `：将容器命名为`douyin_tiktok_api `。
+* `-p 80:80`：将主机上的80端口映射到容器的80端口。根据您的配置或端口可用性调整端口号。
+* `evil0ctal/douyin_tiktok_download_api`：要使用的Docker镜像名称。
+
+### 步骤3：验证容器是否运行
+
+使用以下命令检查您的容器是否正在运行：
+
+```bash
+docker ps
 ```
 
-- 下载视频请求参数
+这将列出所有活动容器。查找`douyin_tiktok_api `以确认其正常运行。
 
-```text
-http://localhost(服务器IP):2333/video?url="复制的(抖音/TikTok)口令/链接"
-# 返回无水印mp4文件
-# 大量请求时很吃服务器内存，容易崩，慎用。
+### 步骤4：访问应用程序
+
+容器运行后，您应该能够通过`http://localhost`或API客户端访问Douyin_TikTok_Download_API。如果配置了不同的端口或从远程位置访问，请调整URL。
+
+### 可选：自定义Docker命令
+
+对于更高级的部署，您可能希望自定义Docker命令，包括环境变量、持久数据的卷挂载或其他Docker参数。这是一个示例：
+
+```bash
+docker run -d --name douyin_tiktok_api -p 80:80 \
+  -v /path/to/your/data:/data \
+  -e MY_ENV_VAR=my_value \
+  evil0ctal/douyin_tiktok_download_api
 ```
 
-- 下载音频请求参数
+* `-v /path/to/your/data:/data`：将主机上的`/path/to/your/data`目录挂载到容器的`/data`目录，用于持久化或共享数据。
+* `-e MY_ENV_VAR=my_value`：在容器内设置环境变量`MY_ENV_VAR`，其值为`my_value`。
 
-```text
-http://localhost(服务器IP):2333/music?url="复制的(抖音/TikTok)口令/链接"
-# 返回mp3文件
-# 大量请求时很吃服务器内存，容易崩，慎用。
+### 配置文件修改
+
+项目的大部分配置可以在以下几个目录中的`config.yaml`文件进行修改：
+
+* `/crawlers/douyin/web/config.yaml`
+* `/crawlers/tiktok/web/config.yaml`
+* `/crawlers/tiktok/app/config.yaml`
+
+### 步骤5：停止并移除容器
+
+需要停止和移除容器时，使用以下命令：
+
+```bash
+# Stop
+docker stop douyin_tiktok_api 
+
+# Remove
+docker rm douyin_tiktok_api
 ```
 
----
+## 📸截图
 
-## 💾部署
+***API速度测试(对比官方API)***
 
-> 注：
-截图可能因更新问题与文字不符，一切请优先参照文字叙述。
+<details><summary>🔎点击展开截图</summary>
 
-> 最好将本项目部署至海外服务器，否则可能会出现奇怪的问题。
+抖音官方API:
+![](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/Screenshots/benchmarks/Douyin_API.png?raw=true)
 
-如：项目部署在国内服务器，而人在美国，点击结果页面链接报错403 ，目测与抖音CDN有关系。
+本项目API:
+![](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/Screenshots/benchmarks/Douyin_API_Douyin_wtf.png?raw=true)
 
-> 使用宝塔Linux面板进行部署
+TikTok官方API:
+![](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/Screenshots/benchmarks/TikTok_API.png?raw=true)
 
-- 首先要去安全组开放5000和2333端口（Web默认5000，API默认2333，可以在文件底部修改。）
-- 在宝塔应用商店内搜索python并安装项目管理器 (推荐使用1.9版本)
+本项目API:
+![](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/Screenshots/benchmarks/TikTok_API_Douyin_wtf.png?raw=true)
 
-![](https://raw.githubusercontent.com/Evil0ctal/TikTokDownloader_PyWebIO/main/Screenshots/BT_Linux_Panel_Deploy_1.png)
+</details>
+<hr>
 
----
+***项目界面***
 
-- 创建一个项目名字随意
-- 路径选择你上传文件的路径
-- Python版本需要至少3以上(在左侧版本管理中自行安装)
-- 框架修改为`Flask`
-- 启动方式修改为`python`
-- Web启动文件选择`web_zh.py`
-- API启动文件选择`web_api.py`
-- 勾选安装模块依赖
-- 开机启动随意
-- 如果宝塔运行了`Nginx`等其他服务时请自行判断端口是否被占用，运行端口可在文件底部修改。
+<details><summary>🔎点击展开截图</summary>
 
-![](https://raw.githubusercontent.com/Evil0ctal/TikTokDownloader_PyWebIO/main/Screenshots/BT_Linux_Panel_Deploy_2.png)
+Web主界面:
 
----
+![](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/Screenshots/v3_screenshots/Home.png?raw=true)
 
-## 🎉截图
+Web main interface:
 
-> 注：
-截图可能因更新问题与文字不符，一切请优先参照文字叙述。
+![](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/Screenshots/v3_screenshots/Home_en.png?raw=true)
 
-- 主界面
+</details>
+<hr>
 
-![](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/blob/main/Screenshots/home.png)
+## 📜 Star历史
 
----
+[![Star History Chart](https://api.star-history.com/svg?repos=Evil0ctal/Douyin_TikTok_Download_API&type=Timeline)](https://star-history.com/#Evil0ctal/Douyin_TikTok_Download_API&Timeline)
 
-- 解析完成
+[Apache-2.0 license](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/Stable/LICENSE)
 
-> 单个
+> Start: 2021/11/06
 
-![](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/blob/main/Screenshots/single_result.png)
-
----
-
-> 批量
-
-![](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/blob/main/Screenshots/multi_results.png)
-
----
-
-- API提交/返回
-
-> 视频返回值
-
-![](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/blob/main/Screenshots/api_video_result.png)
-
-> 图集返回值
-
-![](https://github.com/Evil0ctal/TikTokDownloader_PyWebIO/blob/main/Screenshots/api_image_result.png)
-
-> TikTok返回值
-
-![](https://raw.githubusercontent.com/Evil0ctal/TikTokDownloader_PyWebIO/main/Screenshots/tiktok_API.png)
-
----
+> GitHub: [@Evil0ctal](https://github.com/Evil0ctal)
